@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Автопарк</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="./3175516-uhd_3840_2160_25fps.mp4" type="video/mp4">
+  </video>
+
+  <h1>Мій автопарк</h1>
+
+  <div id="controls">
+    <button id="sort-price">Від дешевших до дорожчих</button>
+    <button id="sort-year">Від новіших до старіших</button>
+    <button id="sort-mileage">Від меншого пробіга до більшого</button>
+    <button id="garage-only">Тільки в гаражі</button>
+    <button id="not-garage">Тільки не в гаражі</button>
+    <input type="text" id="search" placeholder="Пошук за маркою або моделлю">
+  </div>
+
+  <section id="car-list"></section>
+
+  <h2>Додати автомобіль</h2>
+  <form id="car-form">
+    <input type="text" placeholder="Марка" id="brand" required>
+    <input type="text" placeholder="Назва" id="model" required>
+    <input type="number" placeholder="Рік" id="year" required>
+    <select id="fuel" required>
+      <option value="">Тип пального</option>
+      <option value="Бензин">Бензин</option>
+      <option value="Дизель">Дизель</option>
+    </select>
+    <label>
+      <input type="checkbox" id="garage"> В гаражі
+    </label>
+    <input type="url" placeholder="Посилання на фото" id="image" required>
+    <button type="submit">Додати авто</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
